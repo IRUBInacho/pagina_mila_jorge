@@ -2,7 +2,9 @@ import { motion } from "motion/react";
 import { Church, Bell, GlassWater, Utensils, Disc3, Sparkles, Clock } from "lucide-react";
 
 export default function ItinerarySection() {
-  const schedule = [
+  const isPartyOnly = import.meta.env.VITE_TIPO_INVITACION === 'fiesta';
+
+  const fullSchedule = [
     {
       time: "16:30 HRS",
       subtime: "En punto",
@@ -49,6 +51,10 @@ export default function ItinerarySection() {
       highlight: true,
     },
   ];
+
+  const schedule = isPartyOnly
+    ? fullSchedule.filter((item) => item.time === "22:00 HRS")
+    : fullSchedule;
 
   return (
     <section

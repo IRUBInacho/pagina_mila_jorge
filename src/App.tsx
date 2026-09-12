@@ -15,6 +15,8 @@ import FooterSection from "./components/FooterSection";
 import MusicPlayer from "./components/MusicPlayer";
 
 export default function App() {
+  const isPartyOnly = import.meta.env.VITE_TIPO_INVITACION === 'fiesta';
+
   return (
     <div className="min-h-screen bg-[#FAF8F5] text-[#2D2A26] font-sans antialiased selection:bg-[#E3D9CB] selection:text-[#1A1816]">
       {/* Floating navigation header */}
@@ -25,7 +27,7 @@ export default function App() {
         <HeroSection />
 
         {/* 2. Parents' formal invitation card based on reference document */}
-        <FormalCardSection />
+        {!isPartyOnly && <FormalCardSection />}
 
         {/* 3. Schedule & Itinerary */}
         <ItinerarySection />

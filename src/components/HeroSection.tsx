@@ -4,6 +4,8 @@ import BotanicalCrest from "./BotanicalCrest";
 import CountdownTimer from "./CountdownTimer";
 
 export default function HeroSection() {
+  const isPartyOnly = import.meta.env.VITE_TIPO_INVITACION === 'fiesta';
+
   return (
     <section
       id="hero"
@@ -36,7 +38,7 @@ export default function HeroSection() {
           transition={{ duration: 1, delay: 0.2 }}
           className="font-display text-[11px] sm:text-xs tracking-[0.35em] text-[#7A7165] uppercase mb-4"
         >
-          NUESTRA BODA · CASONA EL CRUCERAL
+          {isPartyOnly ? "NUESTRA FIESTA · CASONA EL CRUCERAL" : "NUESTRA BODA · CASONA EL CRUCERAL"}
         </motion.p>
 
         {/* Big Wedding Couple Names */}
@@ -77,8 +79,10 @@ export default function HeroSection() {
           className="max-w-xl mx-auto px-4 my-2"
         >
           <p className="font-serif italic text-lg sm:text-xl text-[#524C44] leading-relaxed font-light">
-            “Con mucho cariño te enviamos la invitación para nuestro matrimonio.
-            Estamos muy felices de que puedas compartir con nosotros este día tan especial.”
+            {isPartyOnly
+              ? "“Con mucho cariño te invitamos a celebrar nuestra fiesta de matrimonio. Estamos muy felices de que puedas compartir con nosotros esta gran noche.”"
+              : "“Con mucho cariño te enviamos la invitación para nuestro matrimonio. Estamos muy felices de que puedas compartir con nosotros este día tan especial.”"
+            }
           </p>
           <p className="font-sans text-xs tracking-wide text-[#7C7469] mt-3 font-normal">
             ¡Estamos contando los días para celebrar juntos y darlo todo en la pista de baile! 🥂✨
@@ -110,13 +114,15 @@ export default function HeroSection() {
             Confirmar Asistencia
           </a>
 
-          <a
-            id="hero-invitation-cta"
-            href="#invitacion"
-            className="w-full sm:w-auto font-display text-xs tracking-[0.25em] uppercase px-8 py-3.5 rounded border border-[#D5CEC2] bg-white/80 hover:bg-white text-[#3D3834] transition-all duration-300 shadow-xs text-center"
-          >
-            Ver Invitación Formal
-          </a>
+          {!isPartyOnly && (
+            <a
+              id="hero-invitation-cta"
+              href="#invitacion"
+              className="w-full sm:w-auto font-display text-xs tracking-[0.25em] uppercase px-8 py-3.5 rounded border border-[#D5CEC2] bg-white/80 hover:bg-white text-[#3D3834] transition-all duration-300 shadow-xs text-center"
+            >
+              Ver Invitación Formal
+            </a>
+          )}
         </motion.div>
 
         {/* Smooth scroll indicator */}
@@ -127,7 +133,7 @@ export default function HeroSection() {
           className="mt-12 sm:mt-16"
         >
           <a
-            href="#invitacion"
+            href={isPartyOnly ? "#itinerario" : "#invitacion"}
             className="flex flex-col items-center gap-1.5 text-[#9E8C73] hover:text-[#524C44] transition-colors"
             aria-label="Desplazarse hacia abajo"
           >
