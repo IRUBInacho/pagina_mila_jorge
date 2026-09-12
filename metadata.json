@@ -1,0 +1,6 @@
+{
+  "name": "Matrimonio Mila & Jorge",
+  "description": "Invitación de matrimonio y landing page de Mila & Jorge - Sábado 07 de noviembre, 2026 en Casona El Cruceral, Pirque.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
