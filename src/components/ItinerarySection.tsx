@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { Church, Bell, GlassWater, Utensils, Disc3, Sparkles, Clock } from "lucide-react";
 
 export default function ItinerarySection() {
-  const isPartyOnly = import.meta.env.VITE_TIPO_INVITACION === 'fiesta';
+  const isPartyOnly = import.meta.env.VITE_TIPO_INVITACION === 'party';
 
   const fullSchedule = [
     {

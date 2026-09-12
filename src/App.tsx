@@ -15,7 +15,7 @@ import FooterSection from "./components/FooterSection";
 import MusicPlayer from "./components/MusicPlayer";
 
 export default function App() {
-  const isPartyOnly = import.meta.env.VITE_TIPO_INVITACION === 'fiesta';
+  const isPartyOnly = import.meta.env.VITE_TIPO_INVITACION === 'party';
 
   return (
     <div className="min-h-screen bg-[#FAF8F5] text-[#2D2A26] font-sans antialiased selection:bg-[#E3D9CB] selection:text-[#1A1816]">

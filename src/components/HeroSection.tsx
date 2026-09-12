@@ -4,7 +4,7 @@ import BotanicalCrest from "./BotanicalCrest";
 import CountdownTimer from "./CountdownTimer";
 
 export default function HeroSection() {
-  const isPartyOnly = import.meta.env.VITE_TIPO_INVITACION === 'fiesta';
+  const isPartyOnly = import.meta.env.VITE_TIPO_INVITACION === 'party';
 
   return (
     <section
