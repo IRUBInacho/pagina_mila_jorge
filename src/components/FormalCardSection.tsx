@@ -37,7 +37,7 @@ export default function FormalCardSection() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
+          viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.9, ease: "easeOut" }}
           className="relative bg-[#FCFAF7] border border-[#DDD6C8] rounded-xl p-4 sm:p-8 md:p-12 shadow-xl shadow-[#3D3833]/5 text-[#2C2926] paper-card overflow-hidden"
         >

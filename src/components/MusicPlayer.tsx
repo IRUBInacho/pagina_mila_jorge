@@ -28,7 +28,7 @@ export default function MusicPlayer() {
 
     // Warm envelope
     gainNode.gain.setValueAtTime(0.0001, ctx.currentTime);
-    gainNode.gain.linearRampToValueAtTime(0.08, ctx.currentTime + 0.08);
+    gainNode.gain.linearRampToValueAtTime(1.0, ctx.currentTime + 0.08);
     gainNode.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + duration);
 
     // Subtle lowpass filter for silky soft felt-piano warmth

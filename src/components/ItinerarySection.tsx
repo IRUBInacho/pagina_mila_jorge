@@ -85,7 +85,7 @@ export default function ItinerarySection() {
                   key={item.title}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-60px" }}
+                  viewport={{ once: true, amount: 0.2 }}
                   transition={{ duration: 0.7, delay: index * 0.1 }}
                   className={`flex flex-col md:flex-row items-center gap-6 md:gap-0 ${
                     isEven ? "md:flex-row-reverse" : ""
