@@ -12,7 +12,6 @@ import DresscodeSection from "./components/DresscodeSection";
 import GiftRegistrySection from "./components/GiftRegistrySection";
 import RsvpSection from "./components/RsvpSection";
 import FooterSection from "./components/FooterSection";
-import MusicPlayer from "./components/MusicPlayer";
 
 export default function App() {
   const isPartyOnly = import.meta.env.VITE_TIPO_INVITACION === 'party';
@@ -47,9 +46,6 @@ export default function App() {
 
       {/* 8. Footer */}
       <FooterSection />
-
-      {/* Romantic ambient melody toggle */}
-      <MusicPlayer />
     </div>
   );
 }
