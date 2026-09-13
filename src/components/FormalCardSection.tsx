@@ -119,7 +119,7 @@ export default function FormalCardSection() {
                   </span>{" "}
                   el día{" "}
                   <span className="font-medium text-[#1A1816]">
-                    sábado 7 de noviembre a las 16:30 horas en punto
+                    sábado 7 de noviembre a las 16:30 hrs en punto
                   </span>
                 </p>
 

@@ -8,27 +8,18 @@ export default function ItinerarySection() {
     {
       time: "16:30 HRS",
       subtime: "En punto",
-      title: "Llegada & Ceremonia Religiosa",
+      title: "Inicio Santa Misa de Matrimonio",
       description:
         "Recepción de los invitados en la capilla y pérgola de Casona El Cruceral para dar inicio a la ceremonia.",
       icon: Church,
       highlight: true,
     },
     {
-      time: "17:00 HRS",
-      subtime: "Misa Solemne",
-      title: "Santa Misa de Matrimonio",
-      description:
-        "Bendición de nuestras alianzas e inicio de este nuevo camino juntos acompañados por nuestras familias y amigos.",
-      icon: Bell,
-      highlight: false,
-    },
-    {
       time: "18:30 HRS",
       subtime: "Atardecer en Pirque",
       title: "Cóctel de Bienvenida",
       description:
-        "Brindis con espumante, selección de aperitivos y música en vivo en los parques y jardines centenarios de la casona.",
+        "Brindis con espumante, selección de aperitivos en los jardines centenarios de la casona.",
       icon: GlassWater,
       highlight: false,
     },
@@ -68,7 +59,7 @@ export default function ItinerarySection() {
             CRONOGRAMA DEL DÍA
           </p>
           <h2 className="font-serif italic text-3xl sm:text-4xl md:text-5xl text-[#282522] mt-2 font-light">
-            El Itinerario de Nuestra Boda
+            El Itinerario de Nuestro Matrimonio
           </h2>
           <p className="font-sans text-xs sm:text-sm tracking-wide text-[#756E63] mt-3 font-normal">
             Sábado 07 de Noviembre, 2026 · Casona El Cruceral, Pirque

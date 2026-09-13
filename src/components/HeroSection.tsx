@@ -38,7 +38,7 @@ export default function HeroSection() {
           transition={{ duration: 1, delay: 0.2 }}
           className="font-display text-[11px] sm:text-xs tracking-[0.35em] text-[#7A7165] uppercase mb-4"
         >
-          {isPartyOnly ? "NUESTRA FIESTA · CASONA EL CRUCERAL" : "NUESTRA BODA · CASONA EL CRUCERAL"}
+          {isPartyOnly ? "NUESTRA FIESTA · CASONA EL CRUCERAL" : "NUESTRO MATRIMONIO · CASONA EL CRUCERAL"}
         </motion.p>
 
         {/* Big Wedding Couple Names */}
@@ -81,7 +81,7 @@ export default function HeroSection() {
           <p className="font-serif italic text-lg sm:text-xl text-[#524C44] leading-relaxed font-light">
             {isPartyOnly
               ? "“Con mucho cariño te invitamos a celebrar nuestra fiesta de matrimonio. Estamos muy felices de que puedas compartir con nosotros esta gran noche.”"
-              : "“Con mucho cariño te enviamos la invitación para nuestro matrimonio. Estamos muy felices de que puedas compartir con nosotros este día tan especial.”"
+              : "Con mucho cariño, compartimos contigo la invitación a nuestro Matrimonio. Estamos felices de que puedas compartir con nosotros este día tan especial"
             }
           </p>
           <p className="font-sans text-xs tracking-wide text-[#7C7469] mt-3 font-normal">
