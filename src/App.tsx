@@ -26,7 +26,7 @@ export default function App() {
         <HeroSection />
 
         {/* 2. Parents' formal invitation card based on reference document */}
-        {!isPartyOnly && <FormalCardSection />}
+        <FormalCardSection />
 
         {/* 3. Schedule & Itinerary */}
         <ItinerarySection />

@@ -6,6 +6,8 @@ import BotanicalCrest from "./BotanicalCrest";
 export default function FormalCardSection() {
   const [copiedCode, setCopiedCode] = useState(false);
 
+  const isPartyOnly = import.meta.env.VITE_TIPO_INVITACION === 'party';
+
   const handleCopyCode = () => {
     navigator.clipboard.writeText("21062421");
     setCopiedCode(true);
@@ -113,19 +115,21 @@ export default function FormalCardSection() {
               {/* Invitation body details */}
               <div className="max-w-xl mx-auto space-y-4 text-center">
                 <p className="font-display text-[11px] sm:text-[13px] tracking-[0.18em] text-[#403B35] leading-relaxed uppercase">
-                  Y tienen el agrado de invitarle a una ceremonia religiosa que se realizará en{" "}
+                  Y tienen el agrado de invitarle a {isPartyOnly ? "la fiesta de matrimonio" : "una ceremonia religiosa"} que se realizará en{" "}
                   <span className="font-medium border-b border-[#C8C0B2] pb-[1px]">
                     Casona El Cruceral (Av. Virginia Subercaseaux 2405, Pirque)
                   </span>{" "}
                   el día{" "}
                   <span className="font-medium text-[#1A1816]">
-                    sábado 7 de noviembre a las 16:30 hrs en punto
+                    sábado 7 de noviembre a las {isPartyOnly ? "22:00" : "16:30"} hrs en punto
                   </span>
                 </p>
 
-                <p className="font-display text-[11px] sm:text-[13px] tracking-[0.22em] text-[#4A443D] uppercase font-normal pt-2">
-                  Y a una recepción en el mismo lugar.
-                </p>
+                {!isPartyOnly && (
+                  <p className="font-display text-[11px] sm:text-[13px] tracking-[0.22em] text-[#4A443D] uppercase font-normal pt-2">
+                    Y a una recepción en el mismo lugar.
+                  </p>
+                )}
               </div>
             </div>
 

@@ -114,15 +114,13 @@ export default function HeroSection() {
             Confirmar Asistencia
           </a>
 
-          {!isPartyOnly && (
-            <a
-              id="hero-invitation-cta"
-              href="#invitacion"
-              className="w-full sm:w-auto font-display text-xs tracking-[0.25em] uppercase px-8 py-3.5 rounded border border-[#D5CEC2] bg-white/80 hover:bg-white text-[#3D3834] transition-all duration-300 shadow-xs text-center"
-            >
-              Ver Invitación Formal
-            </a>
-          )}
+          <a
+            id="hero-invitation-cta"
+            href="#invitacion"
+            className="w-full sm:w-auto font-display text-xs tracking-[0.25em] uppercase px-8 py-3.5 rounded border border-[#D5CEC2] bg-white/80 hover:bg-white text-[#3D3834] transition-all duration-300 shadow-xs text-center"
+          >
+            Ver Invitación Formal
+          </a>
         </motion.div>
 
         {/* Smooth scroll indicator */}
@@ -133,7 +131,7 @@ export default function HeroSection() {
           className="mt-12 sm:mt-16"
         >
           <a
-            href={isPartyOnly ? "#itinerario" : "#invitacion"}
+            href="#invitacion"
             className="flex flex-col items-center gap-1.5 text-[#9E8C73] hover:text-[#524C44] transition-colors"
             aria-label="Desplazarse hacia abajo"
           >
