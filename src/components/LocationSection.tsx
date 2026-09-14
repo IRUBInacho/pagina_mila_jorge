@@ -89,7 +89,7 @@ export default function LocationSection() {
               </h3>
 
               <p className="font-sans text-xs sm:text-sm text-[#665F55] leading-relaxed font-light">
-                Tanto la ceremonia religiosa como la misa, el cóctel, la cena y la fiesta se llevarán a cabo en las mismas dependencias de <strong>Casona El Cruceral</strong>. No será necesario trasladarse durante la jornada.
+                Tanto la ceremonia religiosa como la misa, el cóctel, la comida y la fiesta se llevarán a cabo en las mismas dependencias de <strong>Casona El Cruceral</strong>. No será necesario trasladarse durante la jornada.
               </p>
 
               <div className="space-y-2.5 pt-2 text-[#4A453F] font-sans text-xs">

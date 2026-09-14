@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Church, Bell, GlassWater, Utensils, Disc3, Sparkles, Clock } from "lucide-react";
+import { Church, Bell, GlassWater, Utensils, Disc3, Sparkles, Clock, Music } from "lucide-react";
 
 export default function ItinerarySection() {
   const isPartyOnly = import.meta.env.VITE_TIPO_INVITACION === 'party';
@@ -26,14 +26,23 @@ export default function ItinerarySection() {
     {
       time: "20:30 HRS",
       subtime: "Banquete",
-      title: "Cena & Recepción",
+      title: "Comida & Recepción",
       description:
-        "Cena de gala en el salón principal, discursos, momentos memorables y corte de la torta de novios.",
+        "Comida de gala en el salón principal, discursos, momentos memorables y corte de la torta de novios.",
       icon: Utensils,
       highlight: false,
     },
     {
       time: "22:00 HRS",
+      subtime: "Tradición",
+      title: "Vals de los Novios",
+      description:
+        "Los invitamos a rodear la pista para acompañarnos en nuestro primer baile como marido y mujer.",
+      icon: Music,
+      highlight: false,
+    },
+    {
+      time: "22:10 HRS",
       subtime: "Hasta tarde",
       title: "¡Gran Fiesta & Baile!",
       description:
@@ -44,7 +53,7 @@ export default function ItinerarySection() {
   ];
 
   const schedule = isPartyOnly
-    ? fullSchedule.filter((item) => item.time === "22:00 HRS")
+    ? fullSchedule.filter((item) => item.time === "22:00 HRS" || item.time === "22:10 HRS")
     : fullSchedule;
 
   return (
@@ -69,54 +78,13 @@ export default function ItinerarySection() {
 
         {/* Timeline container */}
         <div className="relative">
-          {/* Vertical central hairline line (only in full version) */}
-          {!isPartyOnly && (
-            <div className="hidden md:block absolute left-1/2 top-4 bottom-4 -translate-x-1/2 w-[1px] bg-[#E0D9CC]" />
-          )}
+          {/* Vertical central hairline line */}
+          <div className="hidden md:block absolute left-1/2 top-4 bottom-4 -translate-x-1/2 w-[1px] bg-[#E0D9CC]" />
 
           <div className="space-y-8 sm:space-y-12">
             {schedule.map((item, index) => {
               const isEven = index % 2 === 0;
               const IconComponent = item.icon;
-
-              if (isPartyOnly) {
-                return (
-                  <motion.div
-                    key={item.title}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.2 }}
-                    transition={{ duration: 0.7 }}
-                    className="flex flex-col items-center gap-5"
-                  >
-                    <div className="relative z-10 flex items-center justify-center w-14 h-14 rounded-full border border-[#D5CEC0] bg-[#FAF8F5] text-[#736858] shadow-xs shrink-0">
-                      <IconComponent className="w-6 h-6 text-[#8C7A63]" />
-                    </div>
-                    
-                    <div className="w-full max-w-lg">
-                      <div className="p-6 sm:p-8 rounded-xl border bg-[#FCFAF7] border-[#C8BEAD] shadow-sm text-center">
-                        <div className="flex items-center justify-center gap-2 mb-3">
-                          <span className="font-serif text-xl sm:text-2xl text-[#2F2B26] font-normal tracking-tight flex items-center gap-2">
-                            <Clock className="w-4 h-4 text-[#8C8070]" />
-                            {item.time}
-                          </span>
-                          <span className="font-display text-[9px] tracking-[0.2em] text-[#8C7A63] uppercase px-2 py-0.5 rounded bg-[#F4EFE6]">
-                            {item.subtime}
-                          </span>
-                        </div>
-
-                        <h3 className="font-display text-sm sm:text-base tracking-[0.12em] text-[#292622] uppercase mt-2 mb-3 font-medium">
-                          {item.title}
-                        </h3>
-
-                        <p className="font-sans text-xs sm:text-sm text-[#665F55] leading-relaxed font-light">
-                          {item.description}
-                        </p>
-                      </div>
-                    </div>
-                  </motion.div>
-                );
-              }
 
               return (
                 <motion.div
